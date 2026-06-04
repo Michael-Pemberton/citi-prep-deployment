@@ -1,11 +1,16 @@
 {
   "version": 2,
-  "buildCommand": "cd banking_frontend && npm install && npm run build",
-  "outputDirectory": "banking_frontend/build",
   "builds": [
     {
       "src": "banking_api/main.py",
       "use": "@vercel/python"
+    },
+    {
+      "src": "banking_frontend/package.json",
+      "use": "@vercel/static-build",
+      "config": {
+        "distDir": "build"
+      }
     }
   ],
   "routes": [

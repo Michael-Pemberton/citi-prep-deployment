@@ -1,0 +1,5 @@
+{
+  "scripts": {
+    "build": "cd banking_frontend && npm install && npm run build"
+  }
+}

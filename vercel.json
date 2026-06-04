@@ -1,5 +1,6 @@
 {
-  "version": 2,
+  "buildCommand": "npm run build",
+  "outputDirectory": "banking_frontend/build",
   "builds": [
     {
       "src": "banking_api/main.py",
@@ -8,8 +9,12 @@
   ],
   "routes": [
     {
-      "src": "/(.*)",
+      "src": "/api/(.*)",
       "dest": "banking_api/main.py"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/banking_frontend/build/index.html"
     }
   ]
 }

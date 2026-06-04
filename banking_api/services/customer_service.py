@@ -1,7 +1,7 @@
 from bson import ObjectId
 from bson.errors import InvalidId
 from motor.motor_asyncio import AsyncIOMotorDatabase
-from models.models import CustomerCreate, CustomerUpdate, CustomerResponse, AccountResponse
+from banking_api.models.models import CustomerCreate, CustomerUpdate, CustomerResponse, AccountResponse
 
 
 def _account_doc_to_response(doc: dict) -> AccountResponse:

@@ -3,7 +3,7 @@ from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from banking_api.controllers.customers import router as customers_router
 from banking_api.controllers.accounts import router as accounts_router
-from database import connect_db, close_db
+from banking_api.database import connect_db, close_db
 
 
 @asynccontextmanager

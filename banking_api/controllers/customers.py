@@ -1,9 +1,9 @@
 from fastapi import APIRouter, HTTPException, Query
 from motor.motor_asyncio import AsyncIOMotorDatabase
 
-import services.customer_service as service
-from models.models import CustomerCreate, CustomerUpdate, CustomerResponse
-from database import get_db
+import banking_api.services.customer_service as service
+from banking_api.models.models import CustomerCreate, CustomerUpdate, CustomerResponse
+from banking_api.database import get_db
 
 router = APIRouter(prefix="/api/customers", tags=["Customers"])
 

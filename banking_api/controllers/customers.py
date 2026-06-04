@@ -1,7 +1,7 @@
 from fastapi import APIRouter, HTTPException, Query
 from motor.motor_asyncio import AsyncIOMotorDatabase
 
-import banking_api.services.customer_service as service
+from banking_api.services import customer_service as service
 from banking_api.models.models import CustomerCreate, CustomerUpdate, CustomerResponse
 from banking_api.database import get_db
 

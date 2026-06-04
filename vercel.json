@@ -6,15 +6,5 @@
       "src": "banking_api/main.py",
       "use": "@vercel/python"
     }
-  ],
-  "routes": [
-    {
-      "src": "/api/(.*)",
-      "dest": "banking_api/main.py"
-    },
-    {
-      "src": "/(.*)",
-      "dest": "/banking_frontend/build/index.html"
-    }
   ]
 }

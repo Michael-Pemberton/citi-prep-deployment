@@ -27,7 +27,11 @@ function AccountModal({ account, customers, onClose, onSave }) {
     if (form.balance === '' || isNaN(form.balance)) { setError('Valid balance is required.'); return; }
     setSaving(true);
     try {
-      const payload = { ...form, balance: parseFloat(form.balance), customer_id: parseInt(form.customer_id) };
+      const payload = { 
+        ...form, 
+        balance: parseFloat(form.balance), 
+        customer_id: form.customer_id  // remove parseInt - it's already a string
+      };
       if (isEdit) {
         await updateAccount(account.id, { account_number: payload.account_number, account_type: payload.account_type, balance: payload.balance });
       } else {

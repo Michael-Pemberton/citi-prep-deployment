@@ -6,11 +6,8 @@
       "use": "@vercel/python"
     },
     {
-      "src": "banking_frontend/package.json",
-      "use": "@vercel/static-build",
-      "config": {
-        "distDir": "build"
-      }
+      "src": "banking_frontend/build",
+      "use": "@vercel/static"
     }
   ],
   "routes": [
@@ -20,11 +17,11 @@
     },
     {
       "src": "/static/(.*)",
-      "dest": "/static/$1"
+      "dest": "/banking_frontend/build/static/$1"
     },
     {
       "src": "/(.*)",
-      "dest": "/index.html"
+      "dest": "/banking_frontend/build/index.html"
     }
   ]
 }

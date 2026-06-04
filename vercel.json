@@ -19,8 +19,12 @@
       "dest": "banking_api/main.py"
     },
     {
+      "src": "/static/(.*)",
+      "dest": "/static/$1"
+    },
+    {
       "src": "/(.*)",
-      "dest": "/banking_frontend/build/index.html"
+      "dest": "/index.html"
     }
   ]
 }

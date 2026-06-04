@@ -1,6 +1,6 @@
 from bson import ObjectId
 from bson.errors import InvalidId
-from banking_api.motor.motor_asyncio import AsyncIOMotorDatabase
+from motor.motor_asyncio import AsyncIOMotorDatabase
 from banking_api.models.models import CustomerCreate, CustomerUpdate, CustomerResponse, AccountResponse
 
 
